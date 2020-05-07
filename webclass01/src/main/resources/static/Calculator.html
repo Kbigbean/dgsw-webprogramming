@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="GET" action="/Calculator">
+        <input name="num1">
+        <select name="oper">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input name="num2">
+        <button type="submit" onclick="sendNum()">계산</button>
+        <p></p>
+    </form>
+
+   <script>
+        function sendNum(){
+            let num1 = $("#num1").val();
+            let num2 = $("#num2").val(); 
+            let oper = $("#oper").val(); 
+            location.href = "/Calculator"+"/"+num1+"/"+ num2+"/"+ oper;
+        }
+
+    </script>
+    
+</body>
+</html>

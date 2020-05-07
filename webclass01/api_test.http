@@ -1,0 +1,28 @@
+GET http://localhost:3333/user
+Accept: application/json
+
+###
+GET http://localhost:3333/user/user1
+Accept: application/json
+
+### 
+POST  http://localhost:3333/user
+Content-Type: application/json
+{
+    "id":"user4",
+    "name":"오",
+    "email": "user444@dgsw"
+}
+###
+PUT   http://localhost:3333/user
+Content-Type: application/json
+{
+    "id":"user4",
+    "name":"아",
+    "email": "user444@dgsw"
+}
+###
+
+DELETE  http://localhost:3333/user/user3
+Accept: application/json
+###

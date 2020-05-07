@@ -11,8 +11,8 @@ public class GetController {
     private CalculatorService cs;
 
     @GetMapping("/calculator/{num1}/{num2}/{sign}")
-    public int calculator(@PathVariable String num1, @PathVariable String num2, @PathVariable String sign) {
+    public int calculator(@PathVariable String num1,@PathVariable String num2,@PathVariable String sign)
+    {
         return cs.calculator(num1, num2, sign);
     }
-    
 }
