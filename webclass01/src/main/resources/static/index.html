@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Greeting</title>
+</head>
+<body>
+        <input type="number" id="num1" name="num1">
+        <input type="number" id="num2" name="num2">
+        <select name="calc" id="calc">
+            <option value="더하기">더하기</option>
+            <option value="빼기">빼기</option>
+            <option value="곱하기">곱하기</option>
+            <option value="나누기">나누기</option>
+        </select>
+        <button onclick="calc()">계산</button>
+    <script>
+        function calc () {
+            let num1 = $("#num1").val();
+            let num2 = $("#num2").val();
+            let calc = $("#calc").val();
+            let val;
+            if (calc === "더하기") {
+                val = (num1 + num2);
+            } else if (calc === "빼기") {
+                val = num1 - num2;
+            } else if (calc === "곱하기") {
+                val = num1 * num2;
+            } else if (calc === "나누기") {
+                val = (num1 / num2);
+            }
+            location.href = "/calc/" + num1 + "/" + calc + "/" + num2 + "/" + val;
+        }
+    </script>
+</body>
+</html>
